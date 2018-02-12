@@ -20,7 +20,7 @@ class FVConst {
             static let kFastMatch = "fast_match"
         }
         class URLMisc {
-            static let kAccessToken = "2dcfcc17-ec6f-427f-a849-b85b7d5bd17e"
+            static let kAccessToken = "aa1f98cd-f2fc-4230-beaf-d2a210fd282a"
         }
     }
 
