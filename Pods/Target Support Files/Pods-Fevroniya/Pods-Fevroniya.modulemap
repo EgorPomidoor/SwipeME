@@ -1,0 +1,6 @@
+framework module Pods_Fevroniya {
+  umbrella header "Pods-Fevroniya-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6V7-tp-6ty">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hopes View Controller-->
+        <scene sceneID="23B-OV-q0c">
+            <objects>
+                <viewController id="6V7-tp-6ty" customClass="FVHopesViewController" customModule="Fevroniya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OB4-ch-NeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slice" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-B3-Tlj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnk-PI-kFn">
+                                <rect key="frame" x="5" y="30" width="310" height="408"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="51g-fD-boD">
+                                    <rect key="frame" x="0.0" y="0.0" width="310" height="408"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bZ-N6-fnv" customClass="SwipableViews" customModule="Fevroniya" customModuleProvider="target">
+                                <rect key="frame" x="45" y="110" width="230" height="278"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-cR-KbF">
+                                <rect key="frame" x="42.5" y="453" width="236" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcb-Ld-wHk">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="qzd-cm-Gze"/>
+                                            <constraint firstAttribute="width" constant="93" id="tKp-a1-Bnl"/>
+                                        </constraints>
+                                        <state key="normal" image="dislikeButton2"/>
+                                        <connections>
+                                            <action selector="dislikeButton" destination="6V7-tp-6ty" eventType="touchUpInside" id="XbV-Lm-J1b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t7-Mt-KsH">
+                                        <rect key="frame" x="143" y="0.0" width="93" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="boP-rk-p5H"/>
+                                            <constraint firstAttribute="width" constant="93" id="kXP-Ds-MP9"/>
+                                        </constraints>
+                                        <state key="normal" image="likeButton2"/>
+                                        <connections>
+                                            <action selector="likeButton" destination="6V7-tp-6ty" eventType="touchUpInside" id="Gqx-yY-TyO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1qF-B3-Tlj" firstAttribute="top" secondItem="OB4-ch-NeQ" secondAttribute="top" id="1YS-3f-BIZ"/>
+                            <constraint firstItem="9bZ-N6-fnv" firstAttribute="centerX" secondItem="1qF-B3-Tlj" secondAttribute="centerX" id="2eV-hh-IUF"/>
+                            <constraint firstItem="Rnk-PI-kFn" firstAttribute="top" secondItem="OB4-ch-NeQ" secondAttribute="top" constant="30" id="538-fl-0So"/>
+                            <constraint firstItem="Rnk-PI-kFn" firstAttribute="leading" secondItem="kXD-29-Fwb" secondAttribute="leading" constant="5" id="7CJ-uB-9ub"/>
+                            <constraint firstItem="9bZ-N6-fnv" firstAttribute="top" secondItem="OB4-ch-NeQ" secondAttribute="top" constant="110" id="Elk-LI-pmK"/>
+                            <constraint firstItem="9bZ-N6-fnv" firstAttribute="leading" secondItem="kXD-29-Fwb" secondAttribute="leading" constant="45" id="Gv0-t8-0D8"/>
+                            <constraint firstItem="SSh-cR-KbF" firstAttribute="top" secondItem="1qF-B3-Tlj" secondAttribute="bottom" constant="-115" id="LH2-Zc-Yd1"/>
+                            <constraint firstItem="SSh-cR-KbF" firstAttribute="centerX" secondItem="1qF-B3-Tlj" secondAttribute="centerX" id="Lu0-Ld-Cgu"/>
+                            <constraint firstItem="kXD-29-Fwb" firstAttribute="trailing" secondItem="Rnk-PI-kFn" secondAttribute="trailing" constant="5" id="PQ0-1R-Ht2"/>
+                            <constraint firstItem="kXD-29-Fwb" firstAttribute="bottom" secondItem="9bZ-N6-fnv" secondAttribute="bottom" constant="180" id="gB8-pB-y4e"/>
+                            <constraint firstAttribute="trailing" secondItem="1qF-B3-Tlj" secondAttribute="trailing" id="jNA-BM-AtO"/>
+                            <constraint firstItem="kXD-29-Fwb" firstAttribute="trailing" secondItem="9bZ-N6-fnv" secondAttribute="trailing" constant="45" id="n4N-gV-eTu"/>
+                            <constraint firstItem="1qF-B3-Tlj" firstAttribute="leading" secondItem="OB4-ch-NeQ" secondAttribute="leading" id="nw4-Wt-oeI"/>
+                            <constraint firstAttribute="bottom" secondItem="1qF-B3-Tlj" secondAttribute="bottom" id="uLc-gL-tMR"/>
+                            <constraint firstAttribute="bottom" secondItem="Rnk-PI-kFn" secondAttribute="bottom" constant="130" id="xbP-lu-CLk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXD-29-Fwb"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="Rnk-PI-kFn" id="5Ra-BY-DF4"/>
+                        <outlet property="containerView" destination="9bZ-N6-fnv" id="4KI-50-iG9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVb-tB-HCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="1.6304347826086958"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Slice" width="475" height="638"/>
+        <image name="dislikeButton2" width="266" height="260"/>
+        <image name="likeButton2" width="266" height="260"/>
+    </resources>
+</document>
